@@ -21,7 +21,6 @@ body {
   justify-content: space-between;
 }
 .teste2 {
-  background: #070e0e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,6 +68,10 @@ p.button {
 }
 .container {
   width: 365px;
+  
+}
+.teste1.active {
+  background-color: #005c49;
 }
 /* barra progresso */
 .progress {
@@ -81,15 +84,103 @@ p.button {
   place-items: center;
 }
 .progress-value p {
-  margin-bottom: -37px;
-  margin-top: -58px;
+  color: #fff;
 }
 .progress-value {
   height: calc(100% - 10px);
   width: calc(100% - 10px);
   background-color: #070e0e;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  place-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  color: #00d2b3;
+  font-family: 'Work Sans', sans-serif;
+}
+.progress-value.active {
+  background-color: #005c49;
+}
+
+/* 2º conteudo */
+
+.test1 {
+  background: #070e0e;
+  border-radius: 0 417px 439px 0;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.test2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13vw;
+}
+.test2__filho {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin-left: 0.5rem;
+}
+p.texte {
+  font-size: 1rem;
+  color: white;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  font-family: 'Work Sans', sans-serif;
+}
+span.semanaa {
+  font-size: 1.5rem;
+  display: block;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  margin-left: 0.2rem;
+}
+p.buttonn {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00d2b3;
+}
+.test3 {
+  display: flex;
+  margin: 10px 0;
+}
+
+/* 2 barra de progresso */
+.progress1 {
+  height: 100px;
+  width: 110px;
+  border-radius: 50%;
+  margin-right: 12px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
   display: grid;
+  place-items: center;
+}
+.progress-value1 p {
+  color: #fff;
+}
+.progress-value1 {
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  background-color: #070e0e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   place-items: center;
   font-weight: 600;
   font-size: 20px;
