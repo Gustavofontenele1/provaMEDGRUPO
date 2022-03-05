@@ -37,7 +37,7 @@ const itens6 = [
 ]
 let itens4 = itens6.map(function (elemento) {
 
-    return `<i class="fa-solid fa-arrow-down"></i>
+    return `<p id="icon"<i class="fa-solid fa-arrow-down"></i></p>
             <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
                 <span class="progress-value active">
                 <p class="progress-number">${elemento.letra}</p>   
