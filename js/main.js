@@ -1,11 +1,13 @@
 const itens = [
     {
-        text: "NEF",
+        text: "",
+        texto: "NEF",
         number: '5',
         value: 25,
     },
     {
-        text: "PED",
+        text: "",
+        texto: "PED",
         number: '1',
         value: 30,
     },
@@ -15,7 +17,8 @@ let itens2 = itens.map(function (element) {
 
     return `<div class="progress" style="background: conic-gradient(#00f5d2 ${element.value}%, #202d2e ${element.value}%)">
                 <span class="progress-value">${element.text}
-                    <span class="progress-number">${element.number}</span>     
+                <p class="progress-number" style="margin-bottom: -87px">${element.texto}</p>   
+                    <p class="progress-number">${element.number}</p>    
                 </span>
             </div>
             `

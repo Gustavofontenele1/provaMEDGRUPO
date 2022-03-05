@@ -80,6 +80,10 @@ p.button {
   display: grid;
   place-items: center;
 }
+.progress-value p {
+  margin-bottom: -37px;
+  margin-top: -58px;
+}
 .progress-value {
   height: calc(100% - 10px);
   width: calc(100% - 10px);
