@@ -24,27 +24,57 @@ let itens2 = itens.map(function (element) {
 document.querySelector(".teste3").innerHTML = itens2.join('\n');
 const itens6 = [
     {
-        letra: "REU",
-        num: '2',
-        valor: 25,
+        letra: "NEF",
+        num: '1',
+        valor: 0,
     },
     {
-        letra: "OBS",
-        num: '2',
-        valor: 30,
+        letra: "CIR",
+        num: '1',
+        valor: 0,
     },
 
 ]
 let itens4 = itens6.map(function (elemento) {
 
-    return `<div class="progress1" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
-                <span class="progress-value1">
+    return `<i class="fa-solid fa-arrow-down"></i>
+            <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
+                <span class="progress-value active">
                 <p class="progress-number">${elemento.letra}</p>   
                     <p class="progress-number">${elemento.num}</p>    
                 </span>
             </div>
+
             `
 });
 document.querySelector(".test3").innerHTML = itens4.join('\n');
 
+document.addEventListener("DOMContentLoaded", function () {
+    const teste1 = document.querySelectorAll('.teste1');
+    if (teste1) {
+        teste1.forEach((el, key) => {
+            el.addEventListener('click', function () {
+                el.classList.toggle('active');
+                teste1.forEach((active, index) => {
+                    if (key !== index) {
+                        active.classList.remove('active')
+                    }
+                })
+            })
+        })
+    }
+});
 
+document.addEventListener('DOMContentLoaded', function(event) {
+    
+    document.getElementById('button').style.visibility = 'visible';
+    document.getElementById('buttonn').style.visibility = 'visible';
+
+    document.getElementById('button').onclick = function() {
+    document.getElementById('flip-card').classList.toggle('do-flip');
+    };
+    document.getElementById('buttonn').onclick = function() {
+        document.getElementById('flip-card').classList.toggle('do-flip');
+        };
+
+});
