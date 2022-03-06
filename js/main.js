@@ -21,7 +21,7 @@ let itens2 = itens.map(function (element) {
             </div>
             `
 });
-document.querySelector(".teste3").innerHTML = itens2.join('\n');
+document.querySelector(".card-script1").innerHTML = itens2.join('\n');
 const itens6 = [
     {
         letra: "NEF",
@@ -37,7 +37,7 @@ const itens6 = [
 ]
 let itens4 = itens6.map(function (elemento) {
 
-    return `<p id="icon"<i class="fa-solid fa-arrow-down"></i></p>
+    return `<p id="icon"<i class="icon fa-solid fa-arrow-down active"></i></p>
             <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
                 <span class="progress-value active">
                 <p class="progress-number">${elemento.letra}</p>   
@@ -47,7 +47,7 @@ let itens4 = itens6.map(function (elemento) {
 
             `
 });
-document.querySelector(".test3").innerHTML = itens4.join('\n');
+document.querySelector(".card-script2").innerHTML = itens4.join('\n');
 
 
 
@@ -101,7 +101,7 @@ const itenss8 = [
 ]
 let itenss14 = itenss8.map(function (elemento) {
 
-    return `<p id="icon"<i class="fa-solid fa-arrow-down"></i></p>
+    return `<p id="icon"<i class="icon fa-solid fa-arrow-down active"></i></p>
             <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
                 <span class="progress-value active">
                 <p class="progress-number">${elemento.letra}</p>   
@@ -114,12 +114,27 @@ let itenss14 = itenss8.map(function (elemento) {
 document.querySelector(".card-script4").innerHTML = itenss14.join('\n');
 
 document.addEventListener("DOMContentLoaded", function () {
-    const teste1 = document.querySelectorAll('.teste1');
+    const teste1 = document.querySelectorAll('.card');
     if (teste1) {
         teste1.forEach((el, key) => {
             el.addEventListener('click', function () {
                 el.classList.toggle('active');
                 teste1.forEach((active, index) => {
+                    if (key !== index) {
+                        active.classList.remove('active')
+                    }
+                })
+            })
+        })
+    }
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const teste2 = document.querySelectorAll('.icon');
+    if (teste2) {
+        teste2.forEach((el, key) => {
+            el.addEventListener('click', function () {
+                el.classList.toggle('active');
+                teste2.forEach((active, index) => {
                     if (key !== index) {
                         active.classList.remove('active')
                     }

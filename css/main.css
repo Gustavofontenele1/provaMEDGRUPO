@@ -16,19 +16,19 @@ body {
   width: 365px;
 }
 /*conteudo1*/
-.teste1 {
+.card1 {
   background: #070e0e;
   border-radius: 0 417px 439px 0;
   display: flex;
   justify-content: space-between;
 }
-.teste2 {
+.conteudo1 {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 13vw;
 }
-.teste2__filho {
+.text1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,14 +36,14 @@ body {
   width: 100%;
   margin-left: 0.5rem;
 }
-p.text {
+p.texto1 {
   font-size: 1rem;
   color: white;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
   font-family: 'Work Sans', sans-serif;
 }
-span.semana {
+span.semana1 {
   font-size: 1.5rem;
   display: block;
   font-weight: bold;
@@ -51,14 +51,14 @@ span.semana {
   margin-left: 0.2rem;
 }
 
-.teste3 {
+.card-script1 {
   display: flex;
   margin: 10px 0;
 }
 .do-flip {
   transform: rotateY(-180deg);
 }
-.teste1.active {
+.card.active {
   background-color: #005c49;
 }
 /*flip-card*/
@@ -72,7 +72,7 @@ span.semana {
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-#flip-card .teste1 {
+#flip-card .card1 {
   position: absolute;
   -o-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -80,7 +80,7 @@ span.semana {
   backface-visibility: hidden;
   z-index: 2;
 }
-#flip-card .test1 {
+#flip-card .card2 {
   -o-transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
@@ -137,7 +137,7 @@ button {
 
 /* 2º conteudo */
 
-.test1 {
+.card2 {
   background: #070e0e;
   border-radius: 0 417px 439px 0;
   display: flex;
@@ -145,16 +145,16 @@ button {
   margin-top: 0px;
   height: 120px;
 }
-.test1.active {
+.card2.active {
   background-color: #005c49;
 }
-.test2 {
+.conteudo2 {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 13vw;
 }
-.test2__filho {
+.text2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -162,21 +162,21 @@ button {
   width: 100%;
   margin-left: 0.5rem;
 }
-p.texte {
+p.texto2 {
   font-size: 1rem;
   color: white;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
   font-family: 'Work Sans', sans-serif;
 }
-span.semanaa {
+span.semana2 {
   font-size: 1.2rem;
   display: block;
   font-weight: 400;
   font-family: 'Work Sans', sans-serif;
   margin-left: 0.2rem;
 }
-.test3 {
+.card-script2 {
   display: flex;
   margin: 10px 0;
 }
@@ -193,7 +193,7 @@ span.semanaa {
   margin-bottom: 28px;
 }
 /*icon*/
-#icon.fa-solid {
+.icon.fa-solid {
   display: flex;
   color: #00f4d1;
   margin-top: 72px;
@@ -349,3 +349,10 @@ span.semana4 {
   transform: rotateY(180deg);
 }
 
+/*active icon*/
+
+.icon.active {
+  color: #000;
+  background: #00ebca;
+  border: #00ebca;
+}
