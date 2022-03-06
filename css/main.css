@@ -12,8 +12,10 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-/* inicio */
-
+#container {
+  width: 365px;
+}
+/*conteudo1*/
 .teste1 {
   background: #070e0e;
   border-radius: 0 417px 439px 0;
@@ -53,12 +55,13 @@ span.semana {
   display: flex;
   margin: 10px 0;
 }
-#container {
-  width: 365px;
-}
 .do-flip {
   transform: rotateY(-180deg);
 }
+.teste1.active {
+  background-color: #005c49;
+}
+/*flip-card*/
 #flip-card {
   -o-transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
@@ -82,9 +85,6 @@ span.semana {
   -webkit-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
-}
-.teste1.active {
-  background-color: #005c49;
 }
 /* barra progresso */
 .progress {
@@ -113,11 +113,20 @@ span.semana {
   color: #00d2b3;
   font-family: 'Work Sans', sans-serif;
 }
-#button .fa-solid {
+button {
+  height: 26px;
+  width: 27px;
+  margin-left: 9px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  border: 0;
+  background: #070e0e;
+}
+#button1 .fa-solid {
   display: flex;
   color: #00f4d1;
-  margin-left: 6px;
-  border: 3px solid;
+  margin-left: 0px;
+  border: 2px solid;
   border-radius: 50%;
   height: 26px;
   width: 27px;
@@ -171,10 +180,10 @@ span.semanaa {
   display: flex;
   margin: 10px 0;
 }
-#buttonn .fa-solid{
+#button2 .fa-solid{
   display: flex;
   color: #00f4d1;
-  margin-left: 10px;
+  margin-left: 0px;
   border: 2px solid;
   border-radius: 50%;
   height: 26px;
@@ -183,6 +192,7 @@ span.semanaa {
   justify-content: center;
   margin-bottom: 28px;
 }
+/*icon*/
 #icon.fa-solid {
   display: flex;
   color: #00f4d1;
@@ -194,8 +204,148 @@ span.semanaa {
   width: 32px;
   align-items: center;
   justify-content: center;
-  z-index: 4;
+  z-index: 1;
   background: #000;
 
+}
+
+/*3º conteudo*/
+#flip-card2{
+  margin-top: 20px;
+}
+.card3 {
+  background: #070e0e;
+  border-radius: 0 417px 439px 0;
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+}
+.card3.active {
+  background-color: #005c49;
+}
+.conteudo3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13vw;
+}
+.text3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin-left: 0.5rem;
+  
+}
+p.texto3 {
+  font-size: 1rem;
+  color: white;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  font-family: 'Work Sans', sans-serif;
+}
+span.semana3 {
+  font-size: 1.5rem;
+  display: block;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  margin-left: 0.2rem;
+}
+.card-script3 {
+  display: flex;
+  margin: 10px 0;
+}
+#button3 .fa-solid{
+  display: flex;
+  color: #00f4d1;
+  margin-left: 0px;
+  border: 2px solid;
+  border-radius: 50%;
+  height: 26px;
+  width: 27px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+/*4ºconteudo*/
+.card4 {
+  background: #070e0e;
+  border-radius: 0 417px 439px 0;
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+}
+.card4.active {
+  background-color: #005c49;
+}
+.conteudo4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13vw;
+}
+.text4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin-left: 0.5rem;
+}
+p.texto4 {
+  font-size: 1rem;
+  color: white;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  font-family: 'Work Sans', sans-serif;
+}
+span.semana4 {
+  font-size: 1.2rem;
+  display: block;
+  font-weight: 400;
+  font-family: 'Work Sans', sans-serif;
+  margin-left: 0.2rem;
+}
+.card-script4 {
+  display: flex;
+  margin: 10px 0;
+}
+#button4 .fa-solid{
+  display: flex;
+  color: #00f4d1;
+  margin-left: 0px;
+  border: 2px solid;
+  border-radius: 50%;
+  height: 26px;
+  width: 27px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+/*flip-card*/
+#flip-card2 {
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+#flip-card2 .card3 {
+  position: absolute;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+#flip-card2 .card4 {
+  -o-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 

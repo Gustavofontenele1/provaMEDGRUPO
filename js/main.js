@@ -15,8 +15,8 @@ let itens2 = itens.map(function (element) {
 
     return `<div class="progress" style="background: conic-gradient(#00f5d2 ${element.value}%, #202d2e ${element.value}%)">
                 <span class="progress-value active">
-                <p class="progress-number">${element.texto}</p>   
-                    <p class="progress-number">${element.number}</p>    
+                <p class="progress-number active">${element.texto}</p>   
+                    <p class="progress-number active">${element.number}</p>    
                 </span>
             </div>
             `
@@ -49,6 +49,70 @@ let itens4 = itens6.map(function (elemento) {
 });
 document.querySelector(".test3").innerHTML = itens4.join('\n');
 
+
+
+
+
+
+
+
+const itens8 = [
+    {
+        letra: "REU",
+        num: '2',
+        valor: 0,
+    },
+    {
+        letra: "OBS",
+        num: '2',
+        valor: 0,
+    },
+
+]
+let itens14 = itens8.map(function (elemento) {
+
+    return `
+            <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
+                <span class="progress-value active">
+                <p class="progress-number">${elemento.letra}</p>   
+                    <p class="progress-number">${elemento.num}</p>    
+                </span>
+            </div>
+
+            `
+});
+
+document.querySelector(".card-script3").innerHTML = itens14.join('\n');
+
+
+
+const itenss8 = [
+    {
+        letra: "REU",
+        num: '2',
+        valor: 0,
+    },
+    {
+        letra: "OBS",
+        num: '2',
+        valor: 0,
+    },
+
+]
+let itenss14 = itenss8.map(function (elemento) {
+
+    return `<p id="icon"<i class="fa-solid fa-arrow-down"></i></p>
+            <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
+                <span class="progress-value active">
+                <p class="progress-number">${elemento.letra}</p>   
+                    <p class="progress-number">${elemento.num}</p>    
+                </span>
+            </div>
+
+            `
+});
+document.querySelector(".card-script4").innerHTML = itenss14.join('\n');
+
 document.addEventListener("DOMContentLoaded", function () {
     const teste1 = document.querySelectorAll('.teste1');
     if (teste1) {
@@ -67,14 +131,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('DOMContentLoaded', function(event) {
     
-    document.getElementById('button').style.visibility = 'visible';
-    document.getElementById('buttonn').style.visibility = 'visible';
+    document.getElementById('button1').style.visibility = 'visible';
+    document.getElementById('button2').style.visibility = 'visible';
 
-    document.getElementById('button').onclick = function() {
+    document.getElementById('button1').onclick = function() {
     document.getElementById('flip-card').classList.toggle('do-flip');
     };
-    document.getElementById('buttonn').onclick = function() {
+    document.getElementById('button2').onclick = function() {
         document.getElementById('flip-card').classList.toggle('do-flip');
+        };
+
+});
+document.addEventListener('DOMContentLoaded', function(event) {
+    
+    document.getElementById('button3').style.visibility = 'visible';
+    document.getElementById('button4').style.visibility = 'visible';
+
+    document.getElementById('button3').onclick = function() {
+    document.getElementById('flip-card2').classList.toggle('do-flip');
+    };
+    document.getElementById('button4').onclick = function() {
+        document.getElementById('flip-card2').classList.toggle('do-flip');
         };
 
 });
