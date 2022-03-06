@@ -37,7 +37,7 @@ const itens6 = [
 ]
 let itens4 = itens6.map(function (elemento) {
 
-    return `<p id="icon"<i class="icon fa-solid fa-arrow-down active"></i></p>
+    return `<p id="icon"<i class="icon fa-solid fa-arrow-down"></i></p>
             <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
                 <span class="progress-value active">
                 <p class="progress-number">${elemento.letra}</p>   
@@ -101,7 +101,7 @@ const itenss8 = [
 ]
 let itenss14 = itenss8.map(function (elemento) {
 
-    return `<p id="icon"<i class="icon fa-solid fa-arrow-down active"></i></p>
+    return `<p id="icon"<i class="icon fa-solid fa-arrow-down "></i></p>
             <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
                 <span class="progress-value active">
                 <p class="progress-number">${elemento.letra}</p>   
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 });
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (event) {
     const teste2 = document.querySelectorAll('.icon');
     if (teste2) {
         teste2.forEach((el, key) => {
@@ -142,10 +142,6 @@ document.addEventListener("DOMContentLoaded", function () {
             })
         })
     }
-});
-
-document.addEventListener('DOMContentLoaded', function(event) {
-    
     document.getElementById('button1').style.visibility = 'visible';
     document.getElementById('button2').style.visibility = 'visible';
 
@@ -155,9 +151,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     document.getElementById('button2').onclick = function() {
         document.getElementById('flip-card').classList.toggle('do-flip');
         };
-
-});
-document.addEventListener('DOMContentLoaded', function(event) {
     
     document.getElementById('button3').style.visibility = 'visible';
     document.getElementById('button4').style.visibility = 'visible';
@@ -170,3 +163,4 @@ document.addEventListener('DOMContentLoaded', function(event) {
         };
 
 });
+
