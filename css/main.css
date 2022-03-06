@@ -20,7 +20,7 @@ body {
   background: #070e0e;
   border-radius: 0 417px 439px 0;
   display: flex;
-  justify-content: space-between;
+  border-radius: 65px 178px 178px 65px;
 }
 .conteudo1 {
   display: flex;
@@ -96,8 +96,11 @@ span.semana1 {
   display: grid;
   place-items: center;
 }
-.progress-value p {
+.progress-number {
   color: #fff;
+}
+.progress-number.active {
+  color: #00d2b3;
 }
 .progress-value {
   height: calc(100% - 10px);
@@ -110,7 +113,6 @@ span.semana1 {
   place-items: center;
   font-weight: 600;
   font-size: 20px;
-  color: #00d2b3;
   font-family: 'Work Sans', sans-serif;
 }
 button {
@@ -139,9 +141,8 @@ button {
 
 .card2 {
   background: #070e0e;
-  border-radius: 0 417px 439px 0;
+  border-radius: 65px 178px 178px 65px;
   display: flex;
-  justify-content: space-between;
   margin-top: 0px;
   height: 120px;
 }
@@ -215,9 +216,8 @@ span.semana2 {
 }
 .card3 {
   background: #070e0e;
-  border-radius: 0 417px 439px 0;
+  border-radius: 65px 178px 178px 65px;
   display: flex;
-  justify-content: space-between;
   height: 120px;
 }
 .card3.active {
@@ -271,9 +271,8 @@ span.semana3 {
 /*4ºconteudo*/
 .card4 {
   background: #070e0e;
-  border-radius: 0 417px 439px 0;
+  border-radius: 65px 178px 178px 65px;
   display: flex;
-  justify-content: space-between;
   height: 120px;
 }
 .card4.active {
@@ -355,4 +354,10 @@ span.semana4 {
   color: #000;
   background: #00ebca;
   border: #00ebca;
+}
+
+/*active progress*/
+
+.prgress.active {
+  background: #005c49;
 }

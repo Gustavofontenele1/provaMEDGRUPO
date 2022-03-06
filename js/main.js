@@ -1,4 +1,4 @@
-const itens = [
+const card1 = [
     {
         texto: "NEF",
         number: '5',
@@ -7,22 +7,22 @@ const itens = [
     {
         texto: "PED",
         number: '1',
-        value: 30,
+        value: 35,
     },
 ]
 
-let itens2 = itens.map(function (element) {
+let item_1 = card1.map(function (element) {
 
     return `<div class="progress" style="background: conic-gradient(#00f5d2 ${element.value}%, #202d2e ${element.value}%)">
-                <span class="progress-value active">
-                <p class="progress-number active">${element.texto}</p>   
-                    <p class="progress-number active">${element.number}</p>    
+                <span class="progress-value ">
+                <p class="progress-number ">${element.texto}</p>   
+                    <p class="progress-number ">${element.number}</p>    
                 </span>
             </div>
             `
 });
-document.querySelector(".card-script1").innerHTML = itens2.join('\n');
-const itens6 = [
+document.querySelector(".card-script1").innerHTML = item_1.join('\n');
+const card2 = [
     {
         letra: "NEF",
         num: '1',
@@ -35,11 +35,11 @@ const itens6 = [
     },
 
 ]
-let itens4 = itens6.map(function (elemento) {
+let item_2 = card2.map(function (elemento) {
 
     return `<p id="icon"<i class="icon fa-solid fa-arrow-down"></i></p>
             <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
-                <span class="progress-value active">
+                <span class="progress-value">
                 <p class="progress-number">${elemento.letra}</p>   
                     <p class="progress-number">${elemento.num}</p>    
                 </span>
@@ -47,7 +47,7 @@ let itens4 = itens6.map(function (elemento) {
 
             `
 });
-document.querySelector(".card-script2").innerHTML = itens4.join('\n');
+document.querySelector(".card-script2").innerHTML = item_2.join('\n');
 
 
 
@@ -56,11 +56,11 @@ document.querySelector(".card-script2").innerHTML = itens4.join('\n');
 
 
 
-const itens8 = [
+const card3 = [
     {
         letra: "REU",
         num: '2',
-        valor: 0,
+        valor: 25,
     },
     {
         letra: "OBS",
@@ -69,11 +69,11 @@ const itens8 = [
     },
 
 ]
-let itens14 = itens8.map(function (elemento) {
+let item_3 = card3.map(function (elemento) {
 
     return `
             <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
-                <span class="progress-value active">
+                <span class="progress-value ">
                 <p class="progress-number">${elemento.letra}</p>   
                     <p class="progress-number">${elemento.num}</p>    
                 </span>
@@ -82,28 +82,28 @@ let itens14 = itens8.map(function (elemento) {
             `
 });
 
-document.querySelector(".card-script3").innerHTML = itens14.join('\n');
+document.querySelector(".card-script3").innerHTML = item_3.join('\n');
 
 
 
-const itenss8 = [
+const card4 = [
     {
-        letra: "REU",
+        letra: "NEF",
         num: '2',
         valor: 0,
     },
     {
-        letra: "OBS",
+        letra: "CIR",
         num: '2',
         valor: 0,
     },
 
 ]
-let itenss14 = itenss8.map(function (elemento) {
+let item_4 = card4.map(function (elemento) {
 
     return `<p id="icon"<i class="icon fa-solid fa-arrow-down "></i></p>
             <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
-                <span class="progress-value active">
+                <span class="progress-value">
                 <p class="progress-number">${elemento.letra}</p>   
                     <p class="progress-number">${elemento.num}</p>    
                 </span>
@@ -111,9 +111,9 @@ let itenss14 = itenss8.map(function (elemento) {
 
             `
 });
-document.querySelector(".card-script4").innerHTML = itenss14.join('\n');
+document.querySelector(".card-script4").innerHTML = item_4.join('\n');
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (event) {
     const teste1 = document.querySelectorAll('.card');
     if (teste1) {
         teste1.forEach((el, key) => {
@@ -128,8 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 });
-document.addEventListener("DOMContentLoaded", function (event) {
-    const teste2 = document.querySelectorAll('.icon');
+        const teste2 = document.querySelectorAll('.icon');
     if (teste2) {
         teste2.forEach((el, key) => {
             el.addEventListener('click', function () {
@@ -142,6 +141,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             })
         })
     }
+    
     document.getElementById('button1').style.visibility = 'visible';
     document.getElementById('button2').style.visibility = 'visible';
 
@@ -162,5 +162,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
         document.getElementById('flip-card2').classList.toggle('do-flip');
         };
 
-});
 
