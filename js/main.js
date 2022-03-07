@@ -37,7 +37,7 @@ const card2 = [
 ]
 let item_2 = card2.map(function (elemento) {
 
-    return `<p id="icon"<i class="icon fa-solid fa-arrow-down"></i></p>
+    return `<button class="button5"><i class="fa-solid fa-arrow-down icon "></i></button>
             <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
                 <span class="progress-value">
                 <p class="progress-number">${elemento.letra}</p>   
@@ -101,7 +101,7 @@ const card4 = [
 ]
 let item_4 = card4.map(function (elemento) {
 
-    return `<p id="icon"<i class="icon fa-solid fa-arrow-down "></i></p>
+    return `<button class="button5"><i class="fa-solid fa-arrow-down icon "></i></button>
             <div class="progress" style="background: conic-gradient(#00f5d2 ${elemento.valor}%, #202d2e ${elemento.valor}%)">
                 <span class="progress-value">
                 <p class="progress-number">${elemento.letra}</p>   
@@ -113,53 +113,69 @@ let item_4 = card4.map(function (elemento) {
 });
 document.querySelector(".card-script4").innerHTML = item_4.join('\n');
 
-document.addEventListener("DOMContentLoaded", function (event) {
-    const teste1 = document.querySelectorAll('.card');
-    if (teste1) {
-        teste1.forEach((el, key) => {
-            el.addEventListener('click', function () {
-                el.classList.toggle('active');
-                teste1.forEach((active, index) => {
-                    if (key !== index) {
-                        active.classList.remove('active')
-                    }
-                })
-            })
-        })
-    }
-});
-        const teste2 = document.querySelectorAll('.icon');
-    if (teste2) {
-        teste2.forEach((el, key) => {
-            el.addEventListener('click', function () {
-                el.classList.toggle('active');
-                teste2.forEach((active, index) => {
-                    if (key !== index) {
-                        active.classList.remove('active')
-                    }
-                })
-            })
-        })
-    }
-    
-    document.getElementById('button1').style.visibility = 'visible';
-    document.getElementById('button2').style.visibility = 'visible';
+document.addEventListener("DOMContentLoaded", function () {
+    const activeicon1 = document.querySelectorAll('.card');
+    if (activeicon1) {
+        activeicon1.forEach((el, key) => {
+            el.addEventListener('click', function (evt) {
+                if (evt.target.className === 'fa-solid fa-plus') {
+                    return;
+                }if (evt.target.className === 'fa-solid fa-minus') {
+                    return;
+                } else {
+                    el.classList.toggle('active');
+                    activeicon1.forEach((active, index) => {
+                        if (key !== index) {
+                            active.classList.remove('active')
+                        }
+                        
+                    })
+                }
 
-    document.getElementById('button1').onclick = function() {
+            })
+        })
+    }
+    const activeicon2 = document.querySelectorAll('.icon');
+    if (activeicon2) {
+        activeicon2.forEach((el, key) => {
+            el.addEventListener('click', function (event) {
+                if (event.target.className === 'fa-solid fa-arrow-down') {
+                    return;
+                } else {
+                    el.classList.toggle('active');
+                    activeicon2.forEach((index) => {
+                        if (key !== index){
+                            active.classList.remove('active')
+                        }
+                    })
+                }
+
+            })
+        })
+    }
+
+
+document.getElementById('button1').style.visibility = 'visible';
+document.getElementById('button2').style.visibility = 'visible';
+
+document.getElementById('button1').onclick = function () {
     document.getElementById('flip-card').classList.toggle('do-flip');
-    };
-    document.getElementById('button2').onclick = function() {
-        document.getElementById('flip-card').classList.toggle('do-flip');
-        };
-    
-    document.getElementById('button3').style.visibility = 'visible';
-    document.getElementById('button4').style.visibility = 'visible';
+    document.querySelector('.card2')
+};
+document.getElementById('button2').onclick = function () {
+    document.getElementById('flip-card').classList.toggle('do-flip');
+};
 
-    document.getElementById('button3').onclick = function() {
+document.getElementById('button3').style.visibility = 'visible';
+document.getElementById('button4').style.visibility = 'visible';
+
+document.getElementById('button3').onclick = function () {
     document.getElementById('flip-card2').classList.toggle('do-flip');
-    };
-    document.getElementById('button4').onclick = function() {
-        document.getElementById('flip-card2').classList.toggle('do-flip');
-        };
+    document.querySelector('.card4')
+};
+document.getElementById('button4').onclick = function () {
+    document.getElementById('flip-card2').classList.toggle('do-flip');
+    document.querySelector('.card4')
+};
 
-
+});
